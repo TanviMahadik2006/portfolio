@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanvi Mahadik | Developer Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(0, 0, 33);
+    color: white;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 80px;
+    background-color: rgb(1, 1, 38);
+}
+.logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+nav ul li a i{
+    margin-right: 6px;
+}
+nav ul li a:hover{
+    color: rgb(80, 80, 237);
+}
+
+/* HERO */
+.firstsection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 0;
+}
+.leftsection{
+    width: 40%;
+    font-size: 3rem;
+}
+.leftsection span{
+    color: blueviolet;
+}
+#element{
+    color: rgb(80, 80, 237);
+    font-size: 2rem;
+}
+.buttons{
+    margin-top: 30px;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 22px;
+    margin-right: 15px;
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.btn i{
+    margin-right: 8px;
+}
+.btn:hover{
+    background-color: rgb(80, 80, 237);
+}
+.rightsection img{
+    width: 80%;
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    background-color: #7676d0;
+    margin: 60px 80px;
+}
+
+/* SECTION */
+.secondsection{
+    max-width: 80vw;
+    margin: auto;
+}
+.text-gray{
+    color: gray;
+}
+.secondsection h1{
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* EXPERIENCE */
+.experience{
+    display: flex;
+    gap: 40px;
+}
+.exp-card{
+    background-color: rgb(1, 1, 38);
+    padding: 25px;
+    border-radius: 10px;
+    width: 30%;
+}
+.exp-card i{
+    font-size: 30px;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+.exp-card h3{
+    margin-bottom: 10px;
+}
+.exp-card p{
+    font-size: 14px;
+    color: gray;
+}
+
+/* PROJECTS */
+.projects{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+.project-card{
+    background-color: rgb(1, 1, 38);
+    padding: 25px;
+    border-radius: 10px;
+    width: 30%;
+}
+.project-card i{
+    font-size: 28px;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+.project-card h3{
+    margin-bottom: 10px;
+}
+.project-card p{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+.project-card a{
+    color: rgb(80, 80, 237);
+    text-decoration: none;
+}
+.project-card a i{
+    margin-left: 6px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #070117;
+    padding: 40px 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    margin-bottom: 10px;
+}
+.footer ul li a{
+    color: gray;
+    text-decoration: none;
+}
+.footer ul li a i{
+    margin-right: 8px;
+}
+.footer ul li a:hover{
+    color: white;
+}
+.footer-rights{
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">Tanvi's Portfolio</div>
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
+        <li><a href="#"><i class="fa-solid fa-code"></i>Skills</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+        <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="firstsection">
+    <div class="leftsection">
+        Hi, My name is <span>Tanvi Mahadik</span>
+        <div>and I am a</div>
+        <span id="element"></span>
+
+        <div class="buttons">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="btn">
+                <i class="fa-brands fa-github"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" class="btn">
+                <i class="fa-brands fa-linkedin"></i>LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <div class="rightsection">
+        <img src="img.png.png" alt="developer">
+    </div>
+</section>
+
+<hr>
+
+<section class="secondsection">
+<span class="text-gray">What I have done so far</span>
+<h1>Experience & Skills</h1>
+
+<div class="experience">
+    <div class="exp-card">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML & CSS</h3>
+        <p>Responsive layouts, clean UI, semantic HTML, modern CSS.</p>
+    </div>
+
+    <div class="exp-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>DSA (C++)</h3>
+        <p>Arrays, strings, stacks, queues, recursion, sorting.</p>
+    </div>
+
+    <div class="exp-card">
+        <i class="fa-brands fa-js"></i>
+        <h3>JavaScript</h3>
+        <p>DOM manipulation, API handling, basic logic building.</p>
+    </div>
+</div>
+</section>
+
+<hr>
+
+<section class="secondsection" id="projects">
+<span class="text-gray">What I have built</span>
+<h1>Projects</h1>
+
+<div class="projects">
+    <div class="project-card">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <h3>Weather App</h3>
+        <p>Weather app using API, HTML, CSS & JavaScript.</p>
+        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="project-card">
+        <i class="fa-solid fa-robot"></i>
+        <h3>Chatbot Website</h3>
+        <p>Simple chatbot using JavaScript logic.</p>
+        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="project-card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Portfolio Website</h3>
+        <p>Personal responsive developer portfolio.</p>
+        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="footer">
+    <div>
+        <h3>Tanvi Mahadik</h3>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
+            <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer-rights">
+    © 2026 Tanvi Mahadik | All Rights Reserved
+</div>
+</footer>
+
+<!-- Typed JS -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#element', {
+    strings: ['Web Developer', 'Frontend Learner', 'DSA Beginner'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+});
+</script>
+
+</body>
+</html>

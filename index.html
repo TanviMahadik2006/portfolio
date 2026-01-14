@@ -8,7 +8,7 @@
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Font Awesome Icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -19,8 +19,19 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: rgb(0, 0, 33);
+    background: linear-gradient(120deg, #020024, #090979, #020024);
     color: white;
+    overflow-x: hidden;
+}
+
+/* GLASS BASE */
+.glass{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border-radius: 12px;
 }
 
 /* NAVBAR */
@@ -30,7 +41,11 @@ nav{
     align-items: center;
     padding: 0 60px;
     height: 80px;
-    background-color: rgb(1, 1, 38);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(1,1,38,0.7);
+    backdrop-filter: blur(12px);
 }
 .logo{
     font-size: 1.6rem;
@@ -48,11 +63,8 @@ nav ul li a{
     color: white;
     font-size: 15px;
 }
-nav ul li a i{
-    margin-right: 6px;
-}
 nav ul li a:hover{
-    color: rgb(80, 80, 237);
+    color: #9b7bff;
 }
 
 /* HERO */
@@ -61,16 +73,17 @@ nav ul li a:hover{
     justify-content: space-around;
     align-items: center;
     margin: 120px 0;
+    animation: fadeUp 1.2s ease forwards;
 }
 .leftsection{
     width: 40%;
     font-size: 3rem;
 }
 .leftsection span{
-    color: blueviolet;
+    color: #b983ff;
 }
 #element{
-    color: rgb(80, 80, 237);
+    color: #7aa2ff;
     font-size: 2rem;
 }
 .buttons{
@@ -80,36 +93,48 @@ nav ul li a:hover{
     display: inline-block;
     padding: 12px 22px;
     margin-right: 15px;
-    background-color: blueviolet;
+    background: linear-gradient(135deg,#7b5cff,#5a9bff);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 14px;
+    position: relative;
+    overflow: hidden;
 }
-.btn i{
-    margin-right: 8px;
+.btn::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);
+    transform:translateX(-100%);
 }
-.btn:hover{
-    background-color: rgb(80, 80, 237);
-}
-.rightsection img{
-    width: 80%;
+.btn:hover::after{
+    transform:translateX(100%);
+    transition:0.6s;
 }
 
+.rightsection img{
+    width: 80%;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.6));
+}
+
+/* DIVIDER */
 hr{
     border: 0;
     height: 2px;
-    background-color: #7676d0;
-    margin: 60px 80px;
+    background: linear-gradient(to right,transparent,#9b7bff,transparent);
+    margin: 80px;
 }
 
-/* SECTION */
+/* SECTIONS */
 .secondsection{
     max-width: 80vw;
     margin: auto;
+    animation: fadeUp 1.3s ease forwards;
 }
 .text-gray{
-    color: gray;
+    color: #aaa;
 }
 .secondsection h1{
     font-size: 2rem;
@@ -122,22 +147,22 @@ hr{
     gap: 40px;
 }
 .exp-card{
-    background-color: rgb(1, 1, 38);
     padding: 25px;
-    border-radius: 10px;
     width: 30%;
+    transition: transform .4s, box-shadow .4s;
+}
+.exp-card:hover{
+    transform: translateY(-12px) rotateX(6deg) rotateY(-6deg);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.7);
 }
 .exp-card i{
     font-size: 30px;
-    color: blueviolet;
-    margin-bottom: 10px;
-}
-.exp-card h3{
+    color: #b983ff;
     margin-bottom: 10px;
 }
 .exp-card p{
     font-size: 14px;
-    color: gray;
+    color: #ccc;
 }
 
 /* PROJECTS */
@@ -147,41 +172,36 @@ hr{
     margin-bottom: 80px;
 }
 .project-card{
-    background-color: rgb(1, 1, 38);
     padding: 25px;
-    border-radius: 10px;
     width: 30%;
+    transition: transform .4s, box-shadow .4s;
+}
+.project-card:hover{
+    transform: translateY(-12px) rotateX(6deg) rotateY(-6deg);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.7);
 }
 .project-card i{
     font-size: 28px;
-    color: blueviolet;
-    margin-bottom: 10px;
-}
-.project-card h3{
-    margin-bottom: 10px;
+    color: #b983ff;
 }
 .project-card p{
     font-size: 14px;
-    color: gray;
-    margin-bottom: 15px;
+    color: #ccc;
 }
 .project-card a{
-    color: rgb(80, 80, 237);
+    color: #7aa2ff;
     text-decoration: none;
-}
-.project-card a i{
-    margin-left: 6px;
 }
 
 /* FOOTER */
 footer{
-    background-color: #070117;
     padding: 40px 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
 }
 .footer{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
 }
 .footer ul{
     list-style: none;
@@ -190,11 +210,8 @@ footer{
     margin-bottom: 10px;
 }
 .footer ul li a{
-    color: gray;
+    color: #aaa;
     text-decoration: none;
-}
-.footer ul li a i{
-    margin-right: 8px;
 }
 .footer ul li a:hover{
     color: white;
@@ -202,27 +219,34 @@ footer{
 .footer-rights{
     text-align: center;
     color: gray;
-    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-18px);}
+    100%{transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<header>
 <nav>
     <div class="logo">Tanvi's Portfolio</div>
     <ul>
-        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-        <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
-        <li><a href="#"><i class="fa-solid fa-code"></i>Skills</a></li>
-        <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
-        <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 </nav>
-</header>
-
-<main>
 
 <section class="firstsection">
     <div class="leftsection">
@@ -231,11 +255,11 @@ footer{
         <span id="element"></span>
 
         <div class="buttons">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="btn">
-                <i class="fa-brands fa-github"></i>GitHub
+            <a href="https://github.com/TanviMahadik2006" target="_blank" class="btn">
+                <i class="fa-brands fa-github"></i> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" class="btn">
-                <i class="fa-brands fa-linkedin"></i>LinkedIn
+            <a href="https://www.linkedin.com/in/tanvi-mahadik-855a59329/" target="_blank" class="btn">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
         </div>
     </div>
@@ -248,94 +272,73 @@ footer{
 <hr>
 
 <section class="secondsection">
-<span class="text-gray">What I have done so far</span>
-<h1>Experience & Skills</h1>
+    <span class="text-gray">What I have done so far</span>
+    <h1>Experience & Skills</h1>
 
-<div class="experience">
-    <div class="exp-card">
-        <i class="fa-brands fa-html5"></i>
-        <h3>HTML & CSS</h3>
-        <p>Responsive layouts, clean UI, semantic HTML, modern CSS.</p>
+    <div class="experience">
+        <div class="exp-card glass">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML & CSS</h3>
+            <p>Responsive layouts, clean UI, semantic HTML.</p>
+        </div>
+        <div class="exp-card glass">
+            <i class="fa-solid fa-code"></i>
+            <h3>DSA (C++)</h3>
+            <p>Arrays, strings, recursion, sorting.</p>
+        </div>
+        <div class="exp-card glass">
+            <i class="fa-brands fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>DOM manipulation, API handling.</p>
+        </div>
     </div>
-
-    <div class="exp-card">
-        <i class="fa-solid fa-code"></i>
-        <h3>DSA (C++)</h3>
-        <p>Arrays, strings, stacks, queues, recursion, sorting.</p>
-    </div>
-
-    <div class="exp-card">
-        <i class="fa-brands fa-js"></i>
-        <h3>JavaScript</h3>
-        <p>DOM manipulation, API handling, basic logic building.</p>
-    </div>
-</div>
 </section>
 
 <hr>
 
 <section class="secondsection" id="projects">
-<span class="text-gray">What I have built</span>
-<h1>Projects</h1>
+    <span class="text-gray">What I have built</span>
+    <h1>Projects</h1>
 
-<div class="projects">
-    <div class="project-card">
-        <i class="fa-solid fa-cloud-sun"></i>
-        <h3>Weather App</h3>
-        <p>Weather app using API, HTML, CSS & JavaScript.</p>
-        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="projects">
+        <div class="project-card glass">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h3>Weather App</h3>
+             <a href="https://rainbow-griffin-62ffa2.netlify.app/">view </a>
+            <p>Weather app using API.</p>
+        </div>
+        <div class="project-card glass">
+            <i class="fa-solid fa-robot"></i>
+            <h3>Chatbot</h3>
+            <a href="https://tanvimahadik2006.github.io/chatbox/">view </a>
+            <p>Simple chatbot using JavaScript.</p>
+        </div>
+        <div class="project-card glass">
+            <i class="fa-solid fa-robot"></i>
+            <h3>dailynotex</h3>
+            <a href="https://tanvimahadik2006.github.io/notesdaily/">view </a>
+            <p>daily notes using HTML.</p>
+       </div>
     </div>
-
-    <div class="project-card">
-        <i class="fa-solid fa-robot"></i>
-        <h3>Chatbot Website</h3>
-        <p>Simple chatbot using JavaScript logic.</p>
-        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-
-    <div class="project-card">
-        <i class="fa-solid fa-laptop-code"></i>
-        <h3>Portfolio Website</h3>
-        <p>Personal responsive developer portfolio.</p>
-        <a href="#">View Code <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-</div>
 </section>
 
-</main>
-
 <footer>
-<div class="footer">
-    <div>
+    <div class="footer">
         <h3>Tanvi Mahadik</h3>
     </div>
-
-    <div>
-        <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
-            <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
-            <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
-        </ul>
-    </div>
-
-    <div>
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-        </ul>
-    </div>
+   <div class="footer-rights">
+    © 2026 Tanvi Mahadik | All Rights Reserved | Contact:
+    <a href="mailto:tanvimahadik@gmail.com" style="color:#7aa2ff; text-decoration:none;">
+        tanvimahadik@gmail.com | contact me : 9518517793
+    </a>
 </div>
 
-<div class="footer-rights">
-    © 2026 Tanvi Mahadik | All Rights Reserved
-</div>
 </footer>
 
 <!-- Typed JS -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
-var typed = new Typed('#element', {
+new Typed('#element', {
     strings: ['Web Developer', 'Frontend Learner', 'DSA Beginner'],
     typeSpeed: 50,
     backSpeed: 30,
